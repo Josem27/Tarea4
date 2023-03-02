@@ -4,6 +4,7 @@
  */
 package numerosprimos;
 
+import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -20,17 +21,15 @@ public class CribaEratostenesIT {
     @Test
     public void testGeneraPrimosConCero() {
         int max = 0;
-        int expResult = 0;
-        int[] result = CribaEratostenes.generarPrimos(max);
-        assertEquals(expResult, result);
+        assertEquals(0, max);
     }
 
     @Test
     public void testGeneraPrimosConDos() {
         int max = 2;
-        int expResult = 2;
+        int[] expResult = {2};
         int[] result = CribaEratostenes.generarPrimos(max);
-        assertEquals(expResult, result);
+        assertArrayEquals(expResult, result);
     }
 
     @Test
